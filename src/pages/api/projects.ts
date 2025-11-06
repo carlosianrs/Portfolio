@@ -1,4 +1,4 @@
-export function getProjects () {
+export default function getProjects () {
   const projects = [
     {
         key: 1,
