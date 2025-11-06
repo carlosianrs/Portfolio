@@ -59,13 +59,13 @@ export default function Home() {
           }}
         ></div>
         
-        <div className="relative font-mono leading-tight drop-shadow-xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-2 text-cyan-100">
+        <div className="relative font-mono leading-tight drop-shadow-xl -mt-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 text-cyan-100">
             {displayedText1}
             {displayedText1.length > 0 && showCursor1 && showCursorFinished && <span>|</span>}
           </h1>
           
-          <h2 className="text-2xl md:text-4xl text-gray-100">
+          <h2 className="text-2xl md:text-3xl text-gray-100">
             {displayedText2}
             {displayedText2.length > 0 && showCursor1 && <span>|</span>}
           </h2>
