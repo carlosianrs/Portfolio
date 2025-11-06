@@ -11,10 +11,15 @@ import {
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import Link from "next/link"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => { setMounted(true) }, [])
+
+  if (!mounted) return null
 
   const closeMenu = () => setOpen(false);
 
