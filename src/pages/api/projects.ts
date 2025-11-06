@@ -67,7 +67,7 @@ export default function getProjects () {
         title: 'PHP'
     },{
         key: 12,
-        pathImage: '/oracle.svg',
+        pathImage: '/Portfolio/oracle.svg',
         alt: 'oracle',
         title: 'Oracle',
     }

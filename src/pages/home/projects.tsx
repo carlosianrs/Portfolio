@@ -7,7 +7,7 @@ export default function Projects() {
   const projects = [
     {
         key: 1,
-        pathImage: '/project-app-icp.png',
+        pathImage: '/Portfolio/project-app-icp.png',
         alt: 'App Casa do Pai',
         title: 'Aplicativo: Casa do Pai - Relatórios (2025)',
         languages: 'React Native, TypeScript, Firebase',
@@ -16,7 +16,7 @@ export default function Projects() {
     },
     {
         key: 2,
-        pathImage: '/project-site-icp.png',
+        pathImage: '/Portfolio/project-site-icp.png',
         alt: 'Site Casa do Pai',
         title: 'Site: Igreja Evangélica Casa do Pai (2025)',
         languages: 'Next, TypeScript',
@@ -25,7 +25,7 @@ export default function Projects() {
     },
     {
         key: 3,
-        pathImage: '/project-loan.png',
+        pathImage: '/Portfolio/project-loan.png',
         alt: 'Site Projeto Biblioteca',
         title: 'Site: Sistema de Biblioteca',
         languages: 'HTML, PHP, JS, MySQL',

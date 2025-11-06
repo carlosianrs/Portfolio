@@ -24,7 +24,7 @@ export default function AboutMe() {
         </div>
 
         <Image
-          src="/logo.png"
+          src="/Portfolio/logo.png"
           alt="logo"
           width={300}
           height={300}
