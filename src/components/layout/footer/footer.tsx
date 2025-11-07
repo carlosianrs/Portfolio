@@ -18,7 +18,7 @@ export const Footer = () => {
             </Link>
           </div>
 
-          <div className='text-end text-gray-300 text-sm'>
+          <div className='text-end text-gray-300 text-xs md:text-sm'>
             <p className='hover:text-gray-100'>+55 (85) 98869-8911</p>
             <p className='hover:text-gray-100'>carlosian894@gmail.com</p>
             <div className='flex items-center hover:text-gray-100'>

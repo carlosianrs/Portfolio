@@ -9,7 +9,7 @@ export default function Home() {
   const [displayedText2, setDisplayedText2] = useState<string>('');
   const [showCursor1, setShowCursor1] = useState<boolean>(true);
   const [showCursorFinished, setShowCursorFinished] = useState<boolean>(true);
- const [activeKey, setActiveKey] = useState<string | null>(null);
+  const [activeKey, setActiveKey] = useState<string[] | null>(null);
 
   const sizes = {
     sm: "min-w-[2rem]",
@@ -27,7 +27,7 @@ export default function Home() {
     [{ key: '`', size: sizes.sm }, { key: '1' }, { key: '2' }, { key: '3' }, { key: '4' }, { key: '5' }, { key: '6' }, { key: '7' }, { key: '8' }, { key: '9' }, { key: '0' }, { key: '-' }, { key: '=' }, { key: 'Backspace', size: sizes.lg }],
     [{ key: 'Tab', size: sizes.lg }, { key: 'Q' }, { key: 'W' }, { key: 'E' }, { key: 'R' }, { key: 'T' }, { key: 'Y' }, { key: 'U' }, { key: 'I' }, { key: 'O' }, { key: 'P' }, { key: '[', size: sizes.md }, { key: ']', size: sizes.md }, { key: '\\', size: sizes.md }],
     [{ key: 'CapsLock', size: sizes.lg }, { key: 'A' }, { key: 'S' }, { key: 'D' }, { key: 'F' }, { key: 'G' }, { key: 'H' }, { key: 'J' }, { key: 'K' }, { key: 'L' }, { key: ';' }, { key: '\'' }, { key: 'Enter', size: sizes.xl_sm }],
-    [{ key: 'Shift', size: sizes.xl }, { key: 'Z' }, { key: 'X' }, { key: 'C' }, { key: 'V' }, { key: 'B' }, { key: 'N' }, { key: 'M' }, { key: ',', size: sizes.lg_sm }, { key: '.', size: sizes.lg_sm }, { key: '/', size: sizes.lg_sm }, { key: 'Shift', size: sizes.xl }],
+    [{ key: 'Shift', size: sizes.xl, position: 'L' }, { key: 'Z' }, { key: 'X' }, { key: 'C' }, { key: 'V' }, { key: 'B' }, { key: 'N' }, { key: 'M' }, { key: ',', size: sizes.lg_sm }, { key: '.', size: sizes.lg_sm }, { key: '/', size: sizes.lg_sm }, { key: 'Shift', size: sizes.xl, position: 'R' }],
     [{ key: 'Ctrl', size: sizes.lg }, { key: 'Win', size: sizes.lg }, { key: 'Alt', size: sizes.lg }, { key: 'Space', size: sizes.hg }, { key: 'Alt', size: sizes.lg }, { key: 'Menu', size: sizes.lg }, { key: 'Ctrl', size: sizes.lg }]
   ];
 
@@ -38,9 +38,9 @@ export default function Home() {
       if (index <= text1.length) {
         setDisplayedText1(text1.slice(0, index));
 
-        if (char && char !== ' ') setActiveKey(char.toUpperCase());
-        if (char === ' ') setActiveKey('SPACE');
-        if (char === '!') setActiveKey('SHIFT');
+        if (char && char !== ' ') setActiveKey([char.toUpperCase()]);
+        if (char === ' ') setActiveKey(['SPACE']);
+        if (char === '!') setActiveKey(['SHIFT', '1']);
         
         setTimeout(() => setActiveKey(null), 100);
         
@@ -55,8 +55,8 @@ export default function Home() {
           if (index2 <= text2.length) {
             setDisplayedText2(text2.slice(0, index2));
 
-            if (char2 && char2 !== ' ') setActiveKey(char2.toUpperCase())
-            if (char2 === ' ') setActiveKey('SPACE')
+            if (char2 && char2 !== ' ') setActiveKey([char2.toUpperCase()])
+            if (char2 === ' ') setActiveKey(['SPACE'])
 
             setTimeout(() => setActiveKey(null), 100);
 
@@ -138,9 +138,17 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center bg-gray-200 border-4 border-white p-1 rounded-2xl">
                 {keyboard.map((line, lineIndex) => (
                   <div key={lineIndex} className="flex bg-gradient-to-b from-gray-600 via-gray-200 to-gray-600">
-                    {line.map((key, keyIndex) => 
-                      <LetterButton key={keyIndex} char={key.key} size={key.size} active={key.key.toUpperCase() == activeKey} />
-                    )}
+                    {line.map((char, keyIndex) => (
+                      <LetterButton
+                        key={keyIndex}
+                        char={char.key}
+                        size={char.size}
+                        active={activeKey
+                          ? activeKey.includes(char.key.toUpperCase()) && (char.position && char.position == 'L' || !char.position)
+                          : false
+                        }
+                      />
+                    ))}
                   </div>
                 ))}
               </div>

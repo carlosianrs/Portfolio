@@ -10,11 +10,11 @@ export default function Projects() {
   return (
     <div className="bg-gray-950 px-6 md:px-20 py-32" id="projects">
       <div className="max-w-screen-2xl mx-auto">
-        <p className="text-white text-heading-hg text-center mb-10">Projetos Relevantes</p>
-        <div className="grid sm:grid-cols-3 grid-cols-1 gap-3">
+        <p className="text-white text-heading-md text-center mb-10 md:text-heading-hg">Projetos Relevantes</p>
+        <div className="grid sm:grid-cols-3 grid-cols- gap-3">
           {projects.map(p => {
             return (
-              <Card className={`relative w-95 h-64 overflow-hidden group cursor-pointer border border-transparent shadow-md ${p.shadow}`} key={p.key}>
+              <Card className={`relative w-95 h-48 md:h-64 overflow-hidden group cursor-pointer border border-transparent shadow-md ${p.shadow}`} key={p.key}>
               <Image
                   src={p.pathImage}
                   alt={p.alt}

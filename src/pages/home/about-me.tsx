@@ -10,9 +10,9 @@ export default function AboutMe() {
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-screen-2xl gap-12">
         
         <div className="text-start space-y-4">
-          <p className="text-gray-100 text-heading-hg">Sobre mim</p>
+          <p className="text-gray-100 text-heading-md md:text-heading-hg">Sobre mim</p>
 
-          <p className="md:text-heading-md text-gray-200 max-w-5xl text-heading-sm text-justify leading-7">
+          <p className="md:text-heading-md text-gray-200 max-w-5xl text-heading-xs text-justify leading-7">
             Sou um Desenvolvedor focado no Back-End, porém já realizei projetos com Front-End.
             Sempre fui apaixonado pela tecnologia, comecei na área de design gráfico, mas com
             um tempo fui aprendendo a criar mods para o minecraft. Me adaptei muito nessa área
@@ -27,8 +27,8 @@ export default function AboutMe() {
         <Image
           src={`${pathConfig.basePath}/logo.png`}
           alt="logo"
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           className="rounded-xl object-contain"
         />
       </div>
