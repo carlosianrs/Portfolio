@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import getLanguages from "../api/projects";
+import getLanguages from "../api/languages";
 
 export default function Languages() {
   const languages = getLanguages()

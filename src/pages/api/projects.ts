@@ -1,77 +1,35 @@
-export default function getProjects () {
-  const projects = [
-    {
-        key: 1,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-        alt: 'javascript',
-        title: 'JavaScript',
-    },
-    {
-        key: 2,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-        alt: 'python',
-        title: 'Python',
-    },
-    {
-        key: 3,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
-        alt: 'node',
-        title: 'NodeJs',
-    },
-    {
-        key: 4,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
-        alt: 'next',
-        title: 'NextJs',
-    },
-    {
-        key: 5,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg',
-        alt: 'sqlserver',
-        title: 'Sql Server',
-    },
-    {
-        key: 6,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
-        alt: 'postgres',
-        title: 'PostgreSQL',
-    },
-    {
-        key: 7,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
-        alt: 'typescript',
-        title: 'TypeScript'
-    },
-    {
-        key: 8,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
-        alt: 'java',
-        title: 'Java'
-    },
-    {
-        key: 9,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-        alt: 'react',
-        title: 'React'
-    },
-    {
-        key: 10,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg',
-        alt: 'nest',
-        title: 'NestJs',
-    },
-    {
-        key: 11,
-        pathImage: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
-        alt: 'php',
-        title: 'PHP'
-    },{
-        key: 12,
-        pathImage: '/Portfolio/oracle.svg',
-        alt: 'oracle',
-        title: 'Oracle',
-    }
-  ]
+import { pathConfig } from "@/lib/settings.config";
 
-  return projects;
+export default function getProjects() {
+    const projects = [
+        {
+            key: 1,
+            pathImage: `${pathConfig.basePath}/project-app-icp.png`,
+            alt: 'App Casa do Pai',
+            title: 'Aplicativo: Casa do Pai - Relatórios (2025)',
+            languages: 'React Native, TypeScript, Firebase',
+            description: 'Aplicativo responsável por gerenciar relatórios de células.',
+            shadow: 'hover:shadow-yellow-300'
+        },
+        {
+            key: 2,
+            pathImage: `${pathConfig.basePath}/project-site-icp.png`,
+            alt: 'Site Casa do Pai',
+            title: 'Site: Igreja Evangélica Casa do Pai (2025)',
+            languages: 'Next, TypeScript',
+            description: 'Site com o objetivo de acolher visitantes e divulgar informações da igreja, como eventos, conferências...',
+            shadow: 'hover:shadow-blue-300'
+        },
+        {
+            key: 3,
+            pathImage: `${pathConfig.basePath}/project-loan.png`,
+            alt: 'Site Projeto Biblioteca',
+            title: 'Site: Sistema de Biblioteca',
+            languages: 'HTML, PHP, JS, MySQL',
+            description: 'Sistema usando o DataTables para registrar os empréstimos de livros na biblioteca.',
+            shadow: 'hover:shadow-white'
+        }
+    ]
+    
+    return projects;
 }
