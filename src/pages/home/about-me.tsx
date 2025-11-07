@@ -1,3 +1,4 @@
+import { pathConfig } from "@/lib/settings.config";
 import Image from "next/image";
 
 export default function AboutMe() {
@@ -24,7 +25,7 @@ export default function AboutMe() {
         </div>
 
         <Image
-          src="/logo.png"
+          src={`${pathConfig.basePath}/logo.png`}
           alt="logo"
           width={300}
           height={300}
