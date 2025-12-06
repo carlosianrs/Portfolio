@@ -10,9 +10,9 @@ export default function AboutMe() {
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-screen-2xl gap-12">
         
         <div className="text-start space-y-4">
-          <p className="text-gray-100 text-heading-md md:text-heading-hg">Sobre mim</p>
+          <p className="text-gray-100 text-heading-md md:text-heading-lg">Sobre mim</p>
 
-          <p className="md:text-heading-md text-gray-200 max-w-5xl text-heading-xs text-justify leading-7">
+          <p className="md:text-heading-sm text-gray-200 max-w-4xl text-heading-xs text-justify leading-7">
             Sou um desenvolvedor focado em Back-End, mas também já realizei diversos projetos envolvendo Front-End.
             Sempre fui apaixonado por tecnologia: comecei na área de design gráfico e, com o tempo, passei a criar
             mods para Minecraft usando Java. Essa experiência despertou meu interesse pela programação e me fez explorar

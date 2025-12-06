@@ -10,7 +10,7 @@ export default function Languages() {
   return (
     <div className="items-center justify-center bg-gray-950 px-10 md:px-20 py-24" id="languages">
       <div className="mx-auto max-w-screen-2xl">
-        <p className="text-white text-heading-md text-center mb-10 md:text-heading-hg">Linguagens e Ferramentas</p>
+        <p className="text-white text-heading-md text-center mb-10 md:text-heading-lg">Linguagens e Ferramentas</p>
         <div className="grid sm:grid-cols-4 grid-cols-2 gap-4">
           {languages.map(l => {
             return (

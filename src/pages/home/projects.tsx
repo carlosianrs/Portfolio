@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <div className="bg-gray-950 px-6 md:px-20 py-24" id="projects">
       <div className="max-w-screen-2xl mx-auto">
-        <p className="text-white text-heading-md text-center mb-10 md:text-heading-hg">Projetos Relevantes</p>
+        <p className="text-white text-heading-md text-center mb-10 md:text-heading-lg">Projetos Relevantes</p>
         <div className="grid sm:grid-cols-3 grid-cols- gap-3">
           {projects.map(p => {
             return (
