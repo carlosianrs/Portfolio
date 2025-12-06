@@ -27,7 +27,11 @@ export const Header = () => {
     <header className="fixed bg-gray-800 top-0 z-50 w-full border-b border-white/10 bg-background/95 backdrop-blur supports-[backdrop-filters]:bg-background/60">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Logo />
+          <div className='flex flex-row items-center gap-2'>
+            <Logo />
+            <p className='text-white'>|</p>
+            <Link href="/curriculo - Carlos Ian Rodrigues dos Santos.pdf" download scroll={true} className='text-cyan-100 hover:text-cyan-200'>Currículo</Link>
+          </div>
           <div className='hidden md:block'>
             <Breadcrumb>
                 <BreadcrumbList>
