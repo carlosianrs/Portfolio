@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <div
-      className="flex items-center justify-center bg-gray-950 px-6 md:px-20 py-16"
+      className="flex items-center justify-center bg-gray-950 px-6 md:px-20 py-24"
       id="about-me"
     >
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-screen-2xl gap-12">

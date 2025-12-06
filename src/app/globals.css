@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
-}
-
-[id] {
-  scroll-margin-top: 2rem;
+  scroll-behavior: smooth;
 }
 
 .card-anim {
