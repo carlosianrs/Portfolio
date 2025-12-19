@@ -81,12 +81,12 @@ export default function Home() {
 
   return (
     <div
-      className="relative flex items-center justify-center min-h-[900px] bg-no-repeat bg-center px-6 -mt-10 bg-cover md:bg-[length:100%_auto]"
+      className="relative flex items-center justify-center bg-no-repeat bg-center px-6 -mt-10 bg-cover md:bg-[length:100%_auto]"
       style={{ backgroundImage: `url('${pathConfig.basePath}/bg.png')` }}
     >
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black via-black/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent" />
 
-      <div className="flex flex-col items-center w-full z-10 -mt-28 md:-mt-16">
+      <div className="flex flex-col items-center w-full z-10 -mt-4 md:-mt-4">
         <div className="scale-[35%] md:scale-75 origin-center">
           <div className="relative w-full max-w-[53rem]" style={{ perspective: '1000px' }}>
             <div className='bg-gradient-to-tl from-gray-300 to-gray-200 border-4 border-black pt-[8px] rounded-2xl'>
