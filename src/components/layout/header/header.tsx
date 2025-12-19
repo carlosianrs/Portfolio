@@ -43,6 +43,18 @@ export const Header = () => {
                 <BreadcrumbSeparator className='text-gray-300' />
                 <BreadcrumbItem>
                     <BreadcrumbLink asChild>
+                    <Link href="/#about-me" scroll={true} className='text-gray-300 hover:text-gray-100'>Sobre mim</Link>
+                    </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className='text-gray-300' />
+                <BreadcrumbItem>
+                    <BreadcrumbLink asChild>
+                    <Link href="/#experience" scroll={true} className='text-gray-300 hover:text-gray-100'>Experiência</Link>
+                    </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className='text-gray-300' />
+                <BreadcrumbItem>
+                    <BreadcrumbLink asChild>
                     <Link href="/#projects" scroll={true} className='text-gray-300 hover:text-gray-100'>Projetos</Link>
                     </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -50,12 +62,6 @@ export const Header = () => {
                 <BreadcrumbItem>
                     <BreadcrumbLink asChild>
                     <Link href="/#languages" scroll={true} className='text-gray-300 hover:text-gray-100'>Linguagens</Link>
-                    </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className='text-gray-300' />
-                <BreadcrumbItem>
-                    <BreadcrumbLink asChild>
-                    <Link href="/#about-me" scroll={true} className='text-gray-300 hover:text-gray-100'>Sobre mim</Link>
                     </BreadcrumbLink>
                 </BreadcrumbItem>
                 </BreadcrumbList>
@@ -71,9 +77,10 @@ export const Header = () => {
               <SheetContent side="right" className="bg-gray-900 text-gray-200">
                 <nav className="flex flex-col gap-4 mt-6 text-lg">
                   <Link href="/#home" className="hover:text-white" onClick={closeMenu}>Início</Link>
+                  <Link href="/#about-me" className="hover:text-white" onClick={closeMenu}>Sobre mim</Link>
+                  <Link href="/#experience" className="hover:text-white" onClick={closeMenu}>Experiência</Link>
                   <Link href="/#projects" className="hover:text-white" onClick={closeMenu}>Projetos</Link>
                   <Link href="/#languages" className="hover:text-white" onClick={closeMenu}>Linguagens</Link>
-                  <Link href="/#about-me" className="hover:text-white" onClick={closeMenu}>Sobre mim</Link>
                 </nav>
               </SheetContent>
             </Sheet>
