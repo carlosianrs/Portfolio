@@ -20,8 +20,8 @@ export default function Languages() {
                   <Image
                     src={l.pathImage}
                     alt={l.alt}
-                    width={50}
-                    height={50}
+                    width={35}
+                    height={35}
                   />
                   <p className="text-gray-100 text-heading-xs md:text-heading-md">{l.title}</p>
                 </div>
