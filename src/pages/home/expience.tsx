@@ -1,4 +1,4 @@
-import { Calendar, CheckCircle2, Clock } from 'lucide-react';
+import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 import getExpiriences from '../api/experiences';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -6,7 +6,7 @@ export default function Experiences() {
   const experiences = getExpiriences();
 
   return (
-    <div className="min-h-screen bg-gray-950 p-8" id='experience'>
+    <div className="min-h-screen bg-gray-950 p-8 flex justify-center items-center py-24" id='experience'>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-white text-center">Experiência</h1>
 
@@ -25,30 +25,26 @@ export default function Experiences() {
 
                           <div className={`flex items-center gap-2 mb-3 justify-end`}>
                             <div className={`p-2 rounded-lg ${p.status === 'finalizado' ? 'bg-yellow-100' : 'bg-green-100'}`}>
-                              {p.status === 'finalizado' ? <CheckCircle2 className="w-5 h-5 text-yellow-600" /> : <Clock className="w-5 h-5 text-green-600" />}
+                              {p.status === 'finalizado' ? <CheckCircle2 className="w-4 h-4 text-yellow-600" /> : <Briefcase className="w-4 h-4 text-green-600" />}
                             </div>
-                            <span className={`text-xs font-semibold px-3 py-1 rounded-full
-                              ${p.status === 'finalizado' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>
-                              {p.status === 'finalizado' ? 'Finalizado' : 'Presente'}
-                            </span>
-                          </div>                          
+                          </div>
                         </div>
+                        <p className="text-gray-600 text-sm text-justify mb-3 p-2 bg-gradient-to-l to-cyan-100/50 from-white rounded-md">Cargo: {p.position}</p>
                         <p className="text-gray-600 text-sm text-justify mb-3">{p.descricao}</p>
-                        
                         <div className={`flex flex-wrap gap-1 justify-start`}>
-                          {p.linguagens.map((l, index) => {
-                            return (
-                              <img
-                                key={'linguagens-' + index}
-                                alt='linguagens'
-                                src={l.url}
-                                width={35}
-                                height={35}
-                                className={l.bg}
-                              />
-                            )
-                          })}
-                        </div>
+                            {p.linguagens.map((l, index) => {
+                              return (
+                                <img
+                                  key={'linguagens-' + index}
+                                  alt='linguagens'
+                                  src={l.url}
+                                  width={35}
+                                  height={35}
+                                  className={l.bg}
+                                />
+                              )
+                            })}
+                          </div>
                       </CardContent>
                     </Card>
                   </div>
@@ -57,7 +53,7 @@ export default function Experiences() {
                     bg-gradient-to-bl from-blue-400 via-cyan-500 to-cyan-50`}>
                   </div>
 
-                  <div className={`rounded-full border-white shadow-lg flex items-center justify-center gap-2 mb-3 md:mb-0`}>
+                  <div className={`rounded-full border-white shadow-lg flex items-center justify-center gap-2`}>
                     <Calendar className='text-white' />
                     <p className='text-white'>{p.ano_inicial == p.ano_final ? p.ano_inicial : `${p.ano_inicial} - ${p.ano_final}`}</p>
                   </div>

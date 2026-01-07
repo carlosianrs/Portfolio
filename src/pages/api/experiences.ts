@@ -1,9 +1,10 @@
 export default function getExpiriences() {
   return [
     {
-      ano_inicial: '2023',
+      ano_inicial: 'Jan/2023',
       ano_final: 'Presente',
       titulo: 'Normatel',
+      position: 'Desenvolver Back-End',
       descricao: 'Iniciei na empresa como estagiário em Quality Assurance. Após 1 ano e 4 meses, migrei para Desenvolvimento com foco em Back-End. Atualmente desenvolvo integrações, melhorias em sistemas e participo da evolução de sites internos.',
       linguagens: [
         { url: 'https://skillicons.dev/icons?i=javascript' },
@@ -22,9 +23,10 @@ export default function getExpiriences() {
       status: 'andamento'
     },
     {
-      ano_inicial: '2022',
-      ano_final: '2022',
+      ano_inicial: 'Ago/2022',
+      ano_final: 'Dez/2022',
       titulo: 'UTEI',
+      position: 'Estagiário',
       descricao: 'Executei treinamentos e demandas práticas, evoluindo do desenvolvimento de pequenas melhorias até a entrega de um site completo em CakePHP.',
       linguagens: [
         { url: 'https://skillicons.dev/icons?i=python' },
