@@ -1,5 +1,3 @@
-import { pathConfig } from "@/lib/settings.config";
-
 export default function getLanguages () {
   const languages = [
     {
@@ -69,7 +67,7 @@ export default function getLanguages () {
         title: 'PHP'
     },{
         key: 12,
-        pathImage: `${pathConfig.basePath}/oracle.svg`,
+        pathImage: `/oracle.svg`,
         alt: 'oracle',
         title: 'Oracle',
     }

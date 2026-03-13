@@ -1,7 +1,6 @@
 'use client'
 
 import { LetterButton } from '@/components/letter-button';
-import { pathConfig } from '@/lib/settings.config';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -82,7 +81,7 @@ export default function Home() {
   return (
     <div
       className="relative flex items-center justify-center bg-no-repeat bg-center px-6 -mt-10 bg-cover md:bg-[length:100%_auto]"
-      style={{ backgroundImage: `url('${pathConfig.basePath}/bg.png')` }}
+      style={{ backgroundImage: `url('/bg.png')` }}
     >
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent" />
 

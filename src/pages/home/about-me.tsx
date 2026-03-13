@@ -1,4 +1,3 @@
-import { pathConfig } from "@/lib/settings.config";
 import Image from "next/image";
 
 export default function AboutMe() {
@@ -26,7 +25,7 @@ export default function AboutMe() {
 
         <div className="flex flex-col space-y-4 justify-center items-center">
           <Image
-            src={`${pathConfig.basePath}/photo.jpg`}
+            src={`/photo.jpg`}
             alt="logo"
             width={300}
             height={300}

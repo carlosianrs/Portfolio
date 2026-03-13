@@ -1,10 +1,8 @@
-import { pathConfig } from "@/lib/settings.config";
-
 export default function getProjects() {
     const projects = [
         {
             key: 1,
-            pathImage: `${pathConfig.basePath}/project-app-icp.png`,
+            pathImage: `/project-app-icp.png`,
             alt: 'App Casa do Pai',
             title: 'Aplicativo: Casa do Pai - Relatórios (2025)',
             languages: 'React Native, TypeScript, Firebase',
@@ -20,7 +18,7 @@ export default function getProjects() {
         },
         {
             key: 2,
-            pathImage: `${pathConfig.basePath}/project-site-icp.png`,
+            pathImage: `/project-site-icp.png`,
             alt: 'Site Casa do Pai',
             title: 'Site: Igreja Evangélica Casa do Pai (2025)',
             languages: 'Next, TypeScript',
@@ -34,7 +32,7 @@ export default function getProjects() {
         },
         {
             key: 3,
-            pathImage: `${pathConfig.basePath}/project-loan.png`,
+            pathImage: `/project-loan.png`,
             alt: 'Site Projeto Biblioteca',
             title: 'Site: Sistema de Biblioteca',
             languages: 'HTML, PHP, JS, MySQL',
